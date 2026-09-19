@@ -1,0 +1,17 @@
+{
+  "name": "ai-shot-library",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/server.mjs",
+    "build": "node scripts/build.mjs --hosted",
+    "build:local": "node scripts/build.mjs",
+    "start": "node scripts/server.mjs dist"
+  },
+  "description": "AI镜头库：157 个镜头配方、214 段动态预览，支持分类搜索、样式切换与批量复制。",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,43 @@
+AI Shot Library (AI镜头库) — custom website edition
+
+Based on Video Shotcraft by Vincentwei1021 / Wei Yihao.
+Upstream: https://github.com/Vincentwei1021/video-shotcraft
+Source revision: 5f047c7cfe10d6616fe59160a750fcfaea510b2e
+Downloaded: 2026-09-06 (Asia/Shanghai)
+
+The original source, recipe descriptions, translations, demo implementations,
+and media are retained under their applicable upstream terms. See LICENSE
+(Apache License 2.0) and the attribution documents within the downloadable
+original template archive, including assets/audio/ATTRIBUTION.md and
+references/shots/ATTRIBUTION.md. Unmodified copies are included here as
+upstream-notices/audio-ATTRIBUTION.md and upstream-notices/shots-ATTRIBUTION.md.
+Remotion has its own license.
+
+Modifications in this edition: dark/blue editorial page layout and favicon,
+Chinese default, custom theme, selected-shots view, recipe and video dialogs,
+local download links, optional WebMCP filtering, and removal of social/contact
+widgets. Modified website files include index.html, design.css, app.js,
+translations.js, and build/server scripts.
+
+The visual refactor adds consistent design tokens, image-led catalog rows,
+a four-column desktop grid, a global motion-preview pause control, and 214 JPEG
+posters extracted from the original local MP4s. No preview visuals were
+generated or substituted. Reduced-motion preferences disable autoplay.
+
+The website's "Download all templates" link points to the complete upstream
+Git-tracked source ZIP without Git repository metadata. It is separate from
+this derivative website's source package. The 214 preview MP4s were downloaded
+separately into this website's media directory and are available through each
+preview dialog.
+No affiliation or endorsement by the original author is implied.
+
+The hosted edition loads the original published preview videos from
+https://vincentwei1021.github.io/video-shotcraft/media/ . The local edition
+uses the downloaded, verified MP4 files. The hosted template download points
+to the exact upstream source revision above.
+
+Repository packaging (2026-09-19): renamed this derivative website to
+AI Shot Library / AI镜头库, updated page metadata and package metadata, and
+added independent setup documentation. The visible Shotcraft source branding
+and original credits are retained. This website has no built-in generative AI
+service and does not require an API key.

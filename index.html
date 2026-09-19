@@ -1,0 +1,65 @@
+<!doctype html>
+<!-- Modified from Video Shotcraft: editorial motion archive; contact widgets removed. -->
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI镜头库：157 个镜头配方、214 段动态预览，支持分类搜索、样式切换与批量复制。基于 Video Shotcraft 的独立网站版本。">
+  <meta name="color-scheme" content="dark light">
+  <title>AI镜头库 · AI Shot Library</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./design.css">
+  <script src="./translations.js" defer></script><script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#library" data-i18n="skip">跳到镜头列表</a>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Shotcraft 镜头模板库"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="brand-frame-back" x="3" y="3" width="25" height="25" rx="7"/><rect class="brand-frame-front" x="12" y="12" width="25" height="25" rx="7"/><circle class="brand-focus" cx="24.5" cy="24.5" r="3.5"/></svg><span>shotcraft<span class="brand-sub">MOTION LIBRARY</span></span></a>
+      <nav class="main-nav" aria-label="主导航">
+        <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1.5"/><rect x="14" y="4" width="6" height="6" rx="1.5"/><rect x="4" y="14" width="6" height="6" rx="1.5"/><rect x="14" y="14" width="6" height="6" rx="1.5"/></svg></span>
+        <button class="nav-item is-active" id="allView" aria-pressed="true"><span class="active-dot"></span><span data-i18n="navLibrary">镜头模板</span></button>
+        <button class="nav-item" id="selectedView" aria-pressed="false"><span data-i18n="navSelected">已选镜头</span><span class="nav-count" id="navSelectedCount">0</span></button>
+        <button class="nav-item" id="guideButton" data-i18n="navGuide">使用指南</button>
+      </nav>
+      <div class="topbar-actions">
+        <button class="round-button" id="themeToggle" aria-label="切换明亮模式"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><span id="themeToggleLabel" class="sr-only">明亮模式</span></button>
+        <button class="round-button lang-button" id="languageToggle" aria-label="切换英文"><span id="languageToggleLabel">EN</span></button>
+        <a class="github-link" href="https://github.com/Vincentwei1021/video-shotcraft" target="_blank" rel="noopener noreferrer" aria-label="查看开源项目"><svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.3-4.3-2.1-6-2.5M15 22v-3.9c0-1.2-.4-2-1-2.5 3.3-.4 6.8-1.6 6.8-7.3 0-1.5-.5-2.8-1.5-3.8.2-.4.7-1.8-.1-3.7 0 0-1.2-.4-4 1.4a14 14 0 0 0-7.3 0C5.1.4 3.9.8 3.9.8c-.8 1.9-.3 3.3-.1 3.7a5.5 5.5 0 0 0-1.5 3.8c0 5.7 3.5 6.9 6.8 7.3-.5.5-.9 1.3-.9 2.5V22"/></svg></a>
+      </div>
+    </header>
+
+    <section class="hero" aria-label="模板库概览">
+      <div class="page-heading"><div><span class="eyebrow">VIDEO SHOTCRAFT / MOTION ARCHIVE</span><h1 id="pageTitle">AI镜头库</h1></div><div class="hero-intro"><p data-i18n="overviewTitle">从一个镜头，开始下一次创作。</p><a href="https://codeload.github.com/Vincentwei1021/video-shotcraft/zip/5f047c7cfe10d6616fe59160a750fcfaea510b2e" class="download-button" download><span data-i18n="downloadTemplates">下载全部模板</span><svg viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M4 15v5h16v-5"/></svg></a></div></div>
+      <div class="screening-room">
+        <div class="screening-caption"><span class="eyebrow">IN FOCUS / 01</span><div><span class="feature-label" data-i18n="featuredLabel">本期镜头</span><h2 data-i18n="featuredTitle">3D 卡片轮播</h2><p class="feature-recipe">carousel-3d</p></div><button id="featuredButton" class="feature-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 10 7-10 7Z"/></svg><span data-i18n="viewPreview">放大预览</span><span class="feature-arrow" aria-hidden="true">↗</span></button></div>
+        <div class="feature-panel"><video id="featureVideo" src="./media/carousel-3d.mp4" poster="./posters/carousel-3d.jpg" muted loop playsinline preload="metadata" aria-label="3D 卡片轮播动态预览"></video><button id="motionToggle" class="motion-toggle" aria-pressed="false"><span class="motion-icon" aria-hidden="true">Ⅱ</span><span data-i18n="pauseMotion">暂停动态预览</span></button></div>
+      </div>
+      <div class="archive-meta"><span class="archive-license"><span class="archive-mark" aria-hidden="true"></span><span data-i18n="openSource">开源镜头库</span><span class="mono">/ Apache 2.0</span></span><dl class="stats"><div><dd id="cardCount">157</dd><dt data-i18n="cards">镜头配方</dt></div><div><dd id="styleCount">214</dd><dt data-i18n="styles">动态样式</dt></div><div><dd id="previewCount">214</dd><dt data-i18n="samples">可播放预览</dt></div></dl></div>
+    </section>
+
+    <section class="controls" id="browse" aria-label="搜索镜头"><div class="filter-caption"><span class="eyebrow">01 / THE LIBRARY</span><span><span data-i18n="browseLabel">浏览镜头</span><span class="result-count" id="resultCount">157</span></span></div><label class="search-field" for="searchInput"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><span class="sr-only" data-i18n="searchLabel">搜索镜头</span><input type="search" id="searchInput" placeholder="搜索镜头名称、效果或使用场景…" autocomplete="off"><kbd>⌘ K</kbd></label><span class="controls-hint" data-i18n="browseHint">预览 · 选择 · 复制</span></section>
+
+    <main class="workspace" id="workspace">
+      <div class="workspace-heading"><div class="workspace-title"><h2 id="sectionTitle">全部镜头</h2><span id="viewCount">157 个模板</span></div><div class="workspace-tip"><span class="tiny-live"></span><span data-i18n="previewHint">悬停播放 · 点击放大</span></div></div>
+      <div class="library-layout"><aside class="sidebar" aria-label="镜头分类"><p class="sidebar-heading"><span data-i18n="categoriesHeading">镜头分类</span><span>10</span></p><nav id="filters" class="category-nav" aria-label="按分类筛选">
+        <button class="category-link is-active" data-filter="all" aria-pressed="true"><span data-i18n="all">全部镜头</span></button>
+        <button class="category-link" data-filter="opening"><span data-i18n="catOpening">开场与品牌</span></button>
+        <button class="category-link" data-filter="typography"><span data-i18n="catTypography">文字与字卡</span></button>
+        <button class="category-link" data-filter="ui-entrance"><span data-i18n="catUiEntrance">界面登场</span></button>
+        <button class="category-link" data-filter="camera"><span data-i18n="catCamera">运镜与空间</span></button>
+        <button class="category-link" data-filter="data"><span data-i18n="catData">数据与指标</span></button>
+        <button class="category-link" data-filter="interaction"><span data-i18n="catInteraction">交互演示</span></button>
+        <button class="category-link" data-filter="transition"><span data-i18n="catTransition">转场</span></button>
+        <button class="category-link" data-filter="rhythm"><span data-i18n="catRhythm">节奏与蒙太奇</span></button>
+        <button class="category-link" data-filter="effects"><span data-i18n="catEffects">光效与强调</span></button>
+        <button class="category-link" data-filter="outro"><span data-i18n="catOutro">收尾</span></button>
+      </nav><div class="sidebar-note"><span>CRAFT YOUR NEXT FRAME.</span><p data-i18n="sidebarNote">每一个好镜头，都是故事的一部分。</p></div></aside>
+      <div class="library-main"><section class="library" id="library" aria-live="polite" aria-busy="true"></section><section class="empty-state" id="emptyState" hidden><div class="empty-symbol">⌕</div><h3 data-i18n="empty">没有符合当前条件的镜头。</h3><button id="clearFilters" data-i18n="clear">清除筛选</button></section></div></div>
+    </main>
+    <footer><span>Video Shotcraft <span class="footer-divider">/</span> <span data-i18n="footerLabel">镜头配方与动态样片</span></span><a href="./LICENSE" target="_blank">Apache 2.0 · Open source ↗</a></footer>
+  </div>
+  <template id="loadingTemplate"><article class="shot-card skeleton-card" aria-hidden="true"><div class="skeleton-media"></div><div class="skeleton-line"></div></article></template>
+  <div class="selection-bar" id="selectionBar" hidden><span class="selection-count" id="selectionCount"></span><button class="selection-copy" id="copySelected">复制所选</button><button class="selection-clear" id="clearSelected">清空</button></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="guideDialog" class="guide-dialog"><div class="dialog-heading"><span>QUICK START</span><button class="dialog-close" aria-label="关闭使用指南">×</button></div><h2 data-i18n="guideTitle">把灵感变成下一个镜头。</h2><ol><li><strong data-i18n="guideStep1">浏览与预览</strong><p data-i18n="guideText1">按分类或关键词寻找镜头，悬停播放样片，多式镜头可以切换不同样式。</p></li><li><strong data-i18n="guideStep2">选择与复制</strong><p data-i18n="guideText2">选中喜欢的镜头，点击「复制所选」。英文镜头名和当前样式会一起复制。</p></li><li><strong data-i18n="guideStep3">开始制作</strong><p data-i18n="guideText3">下载完整模板包，将镜头名和你的内容需求交给已配置 Video Shotcraft 的 AI 编程助手，或打开配方卡查看实现方法。</p></li></ol><div class="guide-foot"><span>Video Shotcraft · Vincentwei1021</span><a href="./NOTICE.txt" target="_blank" data-i18n="attribution">来源与许可 ↗</a></div></dialog>
+</body></html>

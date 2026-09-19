@@ -1,0 +1,9 @@
+/dist/
+/node_modules/
+/downloads/
+/.openai/
+.DS_Store
+*.part
+*.log
+.env
+.env.*
