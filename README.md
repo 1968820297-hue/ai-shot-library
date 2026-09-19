@@ -6,6 +6,22 @@
 
 本项目是 [Video Shotcraft](https://github.com/Vincentwei1021/video-shotcraft) 的独立网站衍生版本，提供中文优先的界面与完整本地预览资源。AI镜头库用于浏览和整理镜头参考；实际制作由你使用的创作工具或已配置 Video Shotcraft 的 AI 编程助手完成，无需在本站填写 API Key。
 
+## 界面预览
+
+以下图片均截取自实际运行的页面。
+
+**首页：镜头库概览与本期动态镜头。**
+
+![AI镜头库首页，展示 3D 环形画廊、资源数量与镜头入口](./docs/screenshots/01-home.png)
+
+**镜头列表：按分类浏览，切换样式、选择镜头或打开配方。**
+
+![镜头列表，展示分类、搜索、动态样式与选择操作](./docs/screenshots/02-library.png)
+
+**放大预览：查看镜头效果，控制播放进度并下载样片。**
+
+![3D 环形画廊的放大预览与视频播放控件](./docs/screenshots/03-preview.png)
+
 ## 能做什么
 
 - **找镜头**：按 10 个分类筛选，支持中文、英文名称及关键词搜索。
@@ -68,6 +84,7 @@ ai-shot-library/
 ├── source/                 157 份 Markdown 镜头配方
 ├── media/                  214 段 MP4 预览
 ├── posters/                214 张真实视频帧 JPEG
+├── docs/screenshots/       实际页面截图
 ├── scripts/
 │   ├── server.mjs          本地 HTTP 服务，支持视频 Range 请求
 │   └── build.mjs           本地与精简托管构建
